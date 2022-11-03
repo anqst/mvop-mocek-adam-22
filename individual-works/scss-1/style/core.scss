@@ -1,0 +1,345 @@
+// RESET
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+// LINK CONFIG
+@import "config";
+
+
+// GLOBAL ELEMENTS
+li:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+
+li.current-page{
+    background-color: $secondary-color-dark;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+// GLOBAL CLASSES
+.background{
+    width: 100%;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.image-container{
+
+    width: 100%;
+
+    img{
+        width: 100%;
+    }
+}
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: $text-primary-color;
+    line-height: 1.5;
+
+    header{
+
+        .background{
+
+            color: $text-secondary-color;
+            background-color: $secondary-color;
+
+            .container{
+
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: stretch;
+                justify-content: space-between;
+                gap: 0.4rem;
+
+                .left-header{
+
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: stretch;
+
+                    .logo{
+                        width: 35px;
+                        padding: 0.5rem 0.4rem;
+                    }
+
+                    .logo:hover{
+                        cursor: pointer;
+                    }
+
+                    ul{
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: stretch;
+
+                        li{
+                            display: flex;
+                            flex-flow: column nowrap;
+                            justify-content: center;
+                            font-size: 0.9rem;
+                            padding: 0 0.4rem;
+                        }
+                    }
+                }
+
+                .right-header{
+
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: stretch;
+
+                    ul{
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: stretch;
+
+                        li{
+                            display: flex;
+                            flex-flow: column nowrap;
+                            justify-content: center;
+                            font-size: 0.9rem;
+                            padding: 0 0.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        .background{
+
+            color: $text-primary-color;
+            background-color: $primary-color;
+
+            .container{
+
+                padding: 2rem 0;
+
+                .heading{
+
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: flex-end;
+                    gap: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    border-bottom: solid 0.1rem #c9c9c9;
+
+                    h1{
+                        font-size: 1.5rem;
+                    }
+
+                    h2{
+                        font-size: 1.2rem;
+                        color: #808080;
+                    }
+                }
+
+                .items{
+
+                    padding-top: 2rem;
+                    display: grid;
+                    grid-template-columns: repeat(1fr, 1);
+                    gap: 2rem;
+
+                    .item{
+
+                        display: flex;
+                        flex-flow: column nowrap;
+                        gap: 0.5rem;
+
+                        .text{
+
+                            display: flex;
+                            flex-flow: column nowrap;
+                            gap: 0.5rem;
+
+                            h3{
+                                color: $text-heading-color;
+                                font-size: 1.2rem;
+                            }
+
+                            p{
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer{
+
+        .background{
+
+            color: $text-primary-color;
+            background-color: $primary-color;
+
+            .container{
+
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                padding: 1rem 0;
+                gap: 0.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    
+    .container{
+        width: 75%;
+    }
+    
+    body{
+    
+        header{
+    
+            .background{
+    
+                .container{
+    
+                    .left-header{
+    
+    
+                        .logo{
+                            width: 40px;
+                            padding: 0.5rem 0.5rem;
+                        }
+    
+                        ul{
+    
+                            li{
+                                font-size: 1rem;
+                                padding: 0 0.7rem;
+                            }
+                        }
+                    }
+    
+                    .right-header{
+    
+                        ul{
+    
+                            li{
+                                font-size: 1rem;
+                                padding: 0 0.7rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        main{
+            .background{
+    
+                .container{
+    
+                    padding: 2.5rem 0;
+
+                    .heading{
+
+                        h1{
+                            font-size: 1.7rem;
+                        }
+
+                        h2{
+                            font-size: 1.3rem;
+                        }
+                    }
+    
+                    .items{
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 2.5rem;
+    
+                        .item{
+                            gap: 0.7rem;
+    
+                            .text{
+                                gap: 0.7rem;
+    
+                                h3{
+                                    font-size: 1.4rem;
+                                }
+    
+                                p{
+                                    font-size: 0.9rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        footer{
+
+            .background{
+
+                .container{
+                    padding: 1.5rem 0;
+                }
+            }
+        }
+    }
+}

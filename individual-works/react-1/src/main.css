@@ -1,0 +1,155 @@
+/* Main Styling */
+a{
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+#root{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  background-color: rgb(255, 255, 255);
+  color: rgb(60, 60, 60);
+}
+
+.background{
+  width: 100%;
+}
+.container{
+  width: 74%;
+  margin: auto;
+}
+
+.img-container img{
+    width: 100%;
+}
+
+/* Header Styling */
+header .background{
+  background-color: rgb(48, 48, 48);
+  color: rgb(204, 204, 204);
+}
+
+header .container{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+header .container ul{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  height: 100%;
+}
+header .container ul > li{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  user-select: none;
+}
+
+header .container ul > li a{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem;
+}
+
+header .container ul > li:hover{
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}
+
+li#logo-container{
+  font-size: 1.2rem;
+}
+
+li#logo-container .img-container{
+  width: 30px;
+}
+
+/* Main Styling */
+main .container{
+  padding: 3rem 0;
+}
+
+main .content-heading{
+  padding-bottom: 0.25rem;
+  border-bottom: solid 2px rgb(200, 200, 200);
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+main .content-heading h1{
+  color: rgb(0, 0, 0);
+  font-size: 1.7rem;
+}
+
+main .content-heading h2{
+  font-size: 1.2rem;
+}
+
+main .content-grid{
+  padding-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+main .content-grid .content-item{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.7rem;
+}
+
+main .content-grid .content-item .img-container{
+  width: 100%;
+}
+
+main .content-grid .content-item .text-container{
+  width: 100%;
+  text-align: start;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+}
+
+main .content-grid .content-item .text-container h3{
+  color: rgb(71, 151, 255);
+  font-size: 1.3rem;
+}
+
+main .content-grid .content-item .text-container p{
+  font-size: 0.9rem;
+}
+
+
+/* Footer Styling */
+footer .container{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+  padding-bottom: 1.2rem;
+}
+
+footer .container ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+footer .container ul > li{
+  font-size: 1rem;
+}
