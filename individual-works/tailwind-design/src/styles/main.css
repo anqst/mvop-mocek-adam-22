@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn{
+    @apply px-7 py-3 rounded-full text-sm font-bold text-white bg-rose-600
+}
+
+.btn-reverse{
+    @apply text-rose-600 bg-white border-solid border-rose-600 border-2
+}
