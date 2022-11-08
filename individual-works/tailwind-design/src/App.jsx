@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import Welcome from "./components/Welcome"
 import ItemBox from "./components/ItemBox"
+import ImageSlide from "./components/ImageSlide"
 
 function App() {
 
@@ -21,17 +22,48 @@ function App() {
               "image": "/...src",
             },
             {
-              "heading": "fast performance",
+              "heading": "partnership deal",
               "content": "Get your blood tests delivered...",
               "image": "/...src",
             },
             {
-              "heading": "fast performance",
+              "heading": "pro subscription",
               "content": "Get your blood tests delivered...",
               "image": "/...src",
             },
             {
+              "heading": "customer support",
+              "content": "Get your blood tests delivered...",
+              "image": "/...src",
+            },
+          ]
+        }
+      />
+      <ImageSlide image="/images/woman.png" imageAlt="WOMAN"/>
+      <ItemBox
+        preHeading="quality features"
+        heading="Amazing useful features"
+        columns={2}
+        wrapImage={true}
+        items={
+          [
+            {
               "heading": "fast performance",
+              "content": "Get your blood tests delivered as fast as possible lorem ipsum and all that.",
+              "image": "/...src",
+            },
+            {
+              "heading": "partnership deal",
+              "content": "Get your blood tests delivered...",
+              "image": "/...src",
+            },
+            {
+              "heading": "pro subscription",
+              "content": "Get your blood tests delivered...",
+              "image": "/...src",
+            },
+            {
+              "heading": "customer support",
               "content": "Get your blood tests delivered...",
               "image": "/...src",
             },
