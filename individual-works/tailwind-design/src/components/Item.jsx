@@ -4,7 +4,7 @@ function Item(props) {
     props.imageDirection == "horizontal" ? flexDirection = "row" : flexDirection = "col";
 
     return (
-        <div className={`flex flex-${flexDirection} gap-5`}>
+        <div className={`flex flex-${flexDirection} gap-x-8 gap-y-5`}>
             <div className="flex flex-col gap-5">
                 <div className="w-16 h-16 bg-rose-600 rounded-3xl"></div>
             </div>
