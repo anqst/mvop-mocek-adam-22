@@ -1,7 +1,7 @@
 function Item(props) {
 
     let flexDirection;
-    props.wrapImage == true ? flexDirection = "row" : flexDirection = "col";
+    props.imageDirection == "horizontal" ? flexDirection = "row" : flexDirection = "col";
 
     return (
         <div className={`flex flex-${flexDirection} gap-5`}>
@@ -9,8 +9,8 @@ function Item(props) {
                 <div className="w-16 h-16 bg-rose-600 rounded-3xl"></div>
             </div>
             <div className="flex flex-col gap-2">
-                <h5 className="font-bold capitalize">{props.heading}</h5>
-                <p className="text-sm max-w-xs">{props.content}</p>
+                <h5 className="font-bold capitalize text-lg">{props.heading}</h5>
+                <p className="text-base [line-height:1.85]">{props.content}</p>
             </div>
         </div>
     )

@@ -2,33 +2,31 @@ import ItemBox from "./ItemBox";
 
 function ImageSlide(props) {
 
+    const items = [];
+
+    props.items.forEach(function (item) {
+
+        items.push({
+            "heading": item.heading,
+            "content": item.content,
+            "image": item.image,
+            "imageDirection": item.imageDirection
+        });
+    })
+
     return (
-        <div className="flex flex-row gap-20">
-            <div>
-                <img className="rounded-md drop-shadow-2xl" src={props.image} alt={props.imageAlt} />
+        <div className={`flex ${props.imagePosition == "right" ? "flex-row-reverse" : "flex-row"} gap-20 justify-between`}>
+            <div className="flex flex-col justify-center">
+                <img className="rounded-md drop-shadow-2xl w-[620px]" src={props.image} alt={props.imageAlt} />
             </div>
-            <div>
+            <div className="max-w-[650px] pt-[3rem]">
                 <ItemBox
-                    preHeading="our services"
-                    heading="Business Goals Achieved with Design"
-                    headingBigger={true}
-                    headingStart={true}
-                    columns={1}
-                    wrapImage={true}
-                    items={
-                        [
-                            {
-                                "heading": "smart features",
-                                "content": "Get your blood tests delivered as fast as possible lorem ipsum and all that.",
-                                "image": "/...src",
-                            },
-                            {
-                                "heading": "secure content",
-                                "content": "Get your blood tests delivered...",
-                                "image": "/...src",
-                            },
-                        ]
-                    }
+                    preHeading={props.preHeading}
+                    heading={props.heading}
+                    headingBigger={props.headingBigger}
+                    headingAlign={`${props.imagePosition == "right" ? "left" : "right"}`}
+                    columns={props.columns}
+                    items={items}
                 />
             </div>
         </div>
