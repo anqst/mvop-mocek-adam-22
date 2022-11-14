@@ -6,7 +6,7 @@ import ImageSlide from "./components/ImageSlide"
 function App() {
 
   return (
-    <div className="bg-white w-9/12 flex flex-col m-auto pt-4 pb-28 gap-32">
+    <div className="bg-white w-9/12 flex flex-col m-auto pt-4 pb-28 gap-16 xl:gap-32">
       <Header />
       <Welcome />
       <ItemBox

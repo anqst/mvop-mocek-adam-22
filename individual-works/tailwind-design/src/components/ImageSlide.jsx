@@ -15,7 +15,7 @@ function ImageSlide(props) {
     })
 
     return (
-        <div className={`flex ${props.imagePosition == "right" ? "flex-row-reverse" : "flex-row"} gap-20 justify-between`}>
+        <div className={`flex flex-col ${props.imagePosition == "right" ? "md:flex-row-reverse" : "md:flex-row"} gap-20 justify-between`}>
             <div className="flex flex-col justify-center">
                 <img className="rounded-md drop-shadow-2xl w-[620px]" src={props.image} alt={props.imageAlt} />
             </div>

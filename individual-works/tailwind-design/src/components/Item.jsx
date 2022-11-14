@@ -1,16 +1,16 @@
 function Item(props) {
 
     let flexDirection;
-    props.imageDirection == "horizontal" ? flexDirection = "row" : flexDirection = "col";
+    props.imageDirection == "horizontal" ? flexDirection = "lg:flex-row" : flexDirection = "lg:flex-col";
 
     return (
-        <div className={`flex flex-${flexDirection} gap-x-8 gap-y-5`}>
+        <div className={`flex flex-col items-center gap-x-8 gap-y-5 md:flex-row ${flexDirection} md:items-start`}>
             <div className="flex flex-col gap-5">
-                <div className="w-16 h-16 bg-rose-600 rounded-3xl"></div>
+                <div className="bg-rose-600 w-12 h-12 rounded-2xl md:w-16 md:h-16  md:rounded-3xl"></div>
             </div>
-            <div className="flex flex-col gap-2">
-                <h5 className="font-bold capitalize text-lg">{props.heading}</h5>
-                <p className="text-base [line-height:1.85]">{props.content}</p>
+            <div className="flex flex-col items-center gap-2 md:items-start">
+                <h5 className="font-bold capitalize text-md">{props.heading}</h5>
+                <p className="text-base leading-loose text-center md:text-start">{props.content}</p>
             </div>
         </div>
     )
