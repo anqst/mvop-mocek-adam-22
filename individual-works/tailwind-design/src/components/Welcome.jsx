@@ -8,7 +8,7 @@ function Welcome() {
                 <button className="btn">Explore</button>
             </div>
             <div className="flex flex-col gap-2 items-center">
-                <img src="/images/screen-sample.png" alt="screen-sample" className="drop-shadow-2xl" />
+                <img src="/images/screen-sample.png" alt="screen-sample" className="drop-shadow-2xl rounded-md" />
             </div>
         </div>
     )
