@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn{
+    @apply p-4 bg-red-500 text-white max-w-fit rounded-full
+}
