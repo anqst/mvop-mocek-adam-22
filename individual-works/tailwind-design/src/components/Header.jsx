@@ -1,22 +1,28 @@
+import { useState, useEffect } from "react";
+import Menu from "./Menu";
+
 function Header() {
+
+    const [mobileMenuVisible, toggleMobileMenu] = useState(false);
 
     return (
         <>
             <div className="flex flex-col lg:flex-row lg:justify-between gap-4">
-                <div className="flex flex-row gap-6 lg:gap-2 items-center justify-center">
+                <div className="flex flex-row gap-6 items-center justify-between lg:justify-center">
                     <img className="w-14 lg:w-12" src="/images/logo.png" alt="logo" />
                     <p className="text-lg font-bold">Startup Landing</p>
+                    <button
+                        type="button"
+                        onClick={function () { toggleMobileMenu(!mobileMenuVisible) }}
+                    >
+                        <img src="/images/burger.png" alt="burger menu" className="w-14 lg:hidden" />
+                    </button>
                 </div>
-                <div className="flex flex-row items-center justify-center">
-                    <ul className="flex flex-col lg:flex-row items-center gap-4 lg:gap-10 text-base font-medium">
-                        <li className="text-rose-600">Home</li>
-                        <li>Features</li>
-                        <li>Pricing</li>
-                        <li>Testimonial</li>
-                    </ul>
+                <div className={`${mobileMenuVisible === true ? "" : "hidden"} lg:hidden`}>
+                    <Menu />
                 </div>
-                <div className="flex flex-col items-center pt-4 lg:flex-row lg:p-0">
-                    <button className="btn btn-reverse">Get Started</button>
+                <div className="hidden lg:block">
+                    <Menu />
                 </div>
             </div>
         </>
