@@ -7,7 +7,7 @@ function Post(props) {
         return () => {
             console.log("Komponenta odebrána.");
         }
-    }, []);
+    });
 
     return (
         <div className="p-10 shadow-2xl bg-white text-black flex flex-col items-center gap-8 w-full">
