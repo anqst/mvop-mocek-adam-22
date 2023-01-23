@@ -4,7 +4,7 @@ import RouteItem from './components/RouteItem';
 
 function App() {
 
-  const itemsPerPage = 30;
+  const itemsPerPage = 9;
   const [offset, setOffset] = useState(0);
   const [routeData, setRouteData] = useState(null);
 
@@ -48,7 +48,7 @@ function App() {
 
         {(routeData === null ?
           <div>Loading..</div> :
-          <div className='px-12 grid grid-cols-3 gap-8'>
+          <div className='px-12 grid grid-cols-3 gap-8 w-full'>
             {routeData.map((e, i) => {
               return <RouteItem data={e} />
             })}

@@ -40,7 +40,7 @@ function RouteItem(props) {
         <div style={{
             "backgroundColor": `#${props.data.route_color}`,
             "color": `${invertColor(props.data.route_color, true)}`
-        }} className="rounded-sm p-6 flex flex-col items-center gap-12 text-center">
+        }} className="w-full rounded-sm p-6 flex flex-col items-center gap-12 text-center">
             <p className="text-lg font-bold">{props.data.route_long_name}</p>
             <p>{props.data.route_short_name}</p>
             <a className="underline" href={props.data.route_url} target="_blank">{props.data.route_url}</a>
