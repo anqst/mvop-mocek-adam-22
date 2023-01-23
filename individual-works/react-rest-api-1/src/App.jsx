@@ -46,6 +46,12 @@ function App() {
           <button className='btn text-black bg-blue-400 hover:bg-blue-600' onClick={() => { setOffset((off) => off + itemsPerPage) }}>&gt;</button>
         </div>
 
+        {/* <div className='px-12 grid grid-cols-3 gap-8 w-full'>
+          {[...Array(itemsPerPage)].map((e, i) => {
+            routeData === null ? <p>Ahoj</p> : <RouteItem data={routeData[i]} />
+          })}
+        </div> */}
+
         {(routeData === null ?
           <div>Loading..</div> :
           <div className='px-12 grid grid-cols-3 gap-8 w-full'>
